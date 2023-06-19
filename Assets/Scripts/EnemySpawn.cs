@@ -7,7 +7,6 @@ public class EnemySpawn : MonoBehaviour
     [SerializeField] private Transform _spawner;
     private Transform[] _spawners;
 
-    // Start is called before the first frame update
     void Start()
     {
         GetAllSpawners();

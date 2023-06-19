@@ -17,7 +17,6 @@ public class EnemyMovement : MonoBehaviour
         _animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         _animator.SetFloat(_forward, 2);
