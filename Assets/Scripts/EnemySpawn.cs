@@ -4,7 +4,7 @@ using UnityEngine;
 public class EnemySpawn : MonoBehaviour
 {
     [SerializeField] private GameObject _enemyPrefab;
-    [SerializeField] private Transform _spawner;
+    [SerializeField] private Transform _parentSpawner;
     private Transform[] _spawners;
 
     void Start()
@@ -27,11 +27,11 @@ public class EnemySpawn : MonoBehaviour
 
     private void GetAllSpawners()
     {
-        _spawners = new Transform[_spawner.childCount];
+        _spawners = new Transform[_parentSpawner.childCount];
 
-        for (int i = 0; i < _spawner.childCount; i++)
+        for (int i = 0; i < _parentSpawner.childCount; i++)
         {
-            _spawners[i] = _spawner.GetChild(i);
+            _spawners[i] = _parentSpawner.GetChild(i);
         }
     }
 }
